@@ -23,7 +23,10 @@
     [GAI sharedInstance].dispatchInterval = 10;
 
     [[GAI sharedInstance] trackerWithTrackingId:accountId];
-
+	
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+	tracker.allowIDFACollection = YES;
+	
     _trackerStarted = true;
     pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];

@@ -115,6 +115,10 @@ public class UniversalAnalyticsPlugin extends CordovaPlugin {
     private void startTracker(String id, CallbackContext callbackContext) {
         if (null != id && id.length() > 0) {
             tracker = GoogleAnalytics.getInstance(this.cordova.getActivity()).newTracker(id);
+			
+			// Enable Advertising Features.
+			tracker.enableAdvertisingIdCollection(true);		
+			
             callbackContext.success("tracker started");
             trackerStarted = true;
             GoogleAnalytics.getInstance(this.cordova.getActivity()).setLocalDispatchPeriod(30);
