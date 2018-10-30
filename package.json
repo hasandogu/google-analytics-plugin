@@ -1,12 +1,14 @@
 {
   "name": "cordova-plugin-google-analytics",
-  "version": "0.8.1",
+  "version": "1.8.6",
   "description": "Google Universal Analytics Plugin",
   "cordova": {
     "id": "cordova-plugin-google-analytics",
     "platforms": [
       "android",
-      "ios"
+      "ios",
+      "windows",
+      "browser"
     ]
   },
   "repository": {
